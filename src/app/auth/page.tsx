@@ -2,19 +2,30 @@
 
 import Login from "@/components/auth/Login";
 import Register from "@/components/auth/Register";
+import { useSession } from "next-auth/react";
 import Image from "next/image";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 
 
 export default function Auth() {
 
-  const [current_auth_component_login, switchAuthComponent] = useState(true);
+  const router = useRouter()
+  const session = useSession();
+
+  const [current_auth_component_login, switchAuthComponent] = useState(false);
 
   function toggleAuthComponent(){
     switchAuthComponent(!current_auth_component_login)
   }
 
+  useEffect(()=>{
+    //console.log(session.status)
+    if(session.status === 'authenticated'){
+          router.replace('/chatpage')
+    }
+  })
   return (
     <div className='min-h-screen flex '>
        <div className="bg-secondary flex justify-center items-center flex-col w-full">

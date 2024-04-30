@@ -32,7 +32,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/components/auth/Login.jsx"
+    "src/components/auth/Login.jsx",
+    "src/app/api/register/route.js"
   ],
   "exclude": [
     "node_modules"
