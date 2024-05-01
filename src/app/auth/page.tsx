@@ -28,14 +28,14 @@ export default function Auth() {
   })
   return (
     <div className='min-h-screen flex '>
-       <div className="bg-secondary flex justify-center items-center flex-col w-full">
+       <div className="bg-secondary flex justify-center items-center flex-col w-full py-20">
       
       {
            current_auth_component_login?<Login changeAuth={toggleAuthComponent} />:<Register changeAuth={toggleAuthComponent}/>
          }
       
       </div>
-      <div className=" bg-gradient-to-b to-[#E750FF] from-[#9D1AFE] flex justify-center items-center flex-col w-[30%] text-white px-6">
+      <div className=" bg-gradient-to-b to-[#E750FF] from-[#9D1AFE] hidden md:flex justify-center items-center flex-col w-[30%] text-white px-6 ">
           <div className="flex flex-col gap-8">
             <Image className="" src={'/images/ailogo.png'} alt='' width={150} height={100} />
             <h1 className="text-[48px] ">Learn, Discover & Automate in One Place.</h1>

@@ -52,7 +52,7 @@ export default function Login({changeAuth}) {
 
 
   return (
-    <div className=' md:w-[50%] '>
+    <div className=' md:w-[50%] w-full p-10'>
      
     <div className="mb-8">
     <h2 className="font-bold text-[36px] text-center">Welcome Back</h2>
