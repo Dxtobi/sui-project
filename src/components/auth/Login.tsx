@@ -4,7 +4,7 @@ import { signIn } from "next-auth/react";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function Register({ changeAuth }: { changeAuth: () => void }) {
+export default function Login({ changeAuth }: { changeAuth: () => void }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [show_password, setShowPassword] = useState(false);
@@ -26,16 +26,18 @@ export default function Register({ changeAuth }: { changeAuth: () => void }) {
   }
 
   async function call_register(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setPending(true);
-    let res = await handleRegister({ email, password });
-    if (!res?.data?.success) {
-      setError(res?.data?.message);
-    }
-    if (res?.data?.success) {
-      changeAuth();
-    }
-    setPending(false);
+    e.preventDefault()
+    setPending(true)
+
+    const res = await signIn("credentials", {
+      redirect:false,
+      email:email,
+      password:password,
+    })
+
+    console.log(res)
+    setPending(false)
+
   }
 
   return (
@@ -43,10 +45,10 @@ export default function Register({ changeAuth }: { changeAuth: () => void }) {
     <div className=' md:w-[47%] flex relative left-10 flex-col items-center '>
       <div className='mb-10'>
         <h2 className='font-bold text-[36px] text-call_to_action text-center'>
-          Sign up with free trail
+        Welcome Back
         </h2>
         <p className=' text-center text-call_to_action'>
-          Empower your experience, sign up for a free account today{" "}
+        Great to have you back, let’s continue from where you left off!
         </p>
       </div>
 
@@ -98,12 +100,7 @@ export default function Register({ changeAuth }: { changeAuth: () => void }) {
             {error}
           </span>
         )}
-        {/* <p>
-          By registering for an account, you are consenting to our Terms of
-          Service and confirming that you have reviewed and accepted the Global
-          Privacy Statement.
-        </p> */}
-
+       
         <button
           className={`w-full text-white ${
             pending ? "bg-gray-500" : "bg-call_to_action"
@@ -114,12 +111,12 @@ export default function Register({ changeAuth }: { changeAuth: () => void }) {
         </button>
       </form>
       <p className=' text-center'>
-        Already have an account?{" "}
+      Don’t have an account?   {" "}
         <button
           className='underline text-call_to_action hover:no-underline'
           onClick={changeAuth}
         >
-          Login
+          Sign Up
         </button>
       </p>
       <div className='relative border-t border-gray-400 flex justify-center w-[80%] mx-auto my-8'>
