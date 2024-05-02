@@ -25,10 +25,11 @@ export default function Home() {
         </button>
       </div>
 
-      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" className="w-[37em] lg:w-[42em]">
+      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" className="flex flex-col w-[37em] lg:w-[42em] justify-end items-end">
         <h1 className="special-text-2 text-[32px] font-[600]">
           Create a smart contract for a marketplace.
         </h1>
+        <img className='w-[62vh] h-42 mt-[-6rem] lg:mt-[-8rem]' src='/images/hero_AI.png' />
       </div>
     </section>
   );
