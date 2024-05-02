@@ -43,3 +43,34 @@ pre {
   background-clip: text;
   font-family: Play, sans-serif;
 }
+
+.special-text-2 {
+  background: linear-gradient(50deg, #e344ff, #335fff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-family: Play, sans-serif;
+}
+
+/* -------------------------------------------- */
+/*------------------ scrollbar */
+/* -------------------------------------------- */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  /* display: none; */
+  border-radius: 1rem;
+  /* background: rgba(220, 146, 73, 1); */
+  transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #335fff;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff84;
+} /**/
