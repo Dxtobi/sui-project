@@ -29,7 +29,7 @@ export default function Home() {
         <h1 className="special-text-2 text-[32px] font-[600]">
           Create a smart contract for a marketplace.
         </h1>
-        <img className='w-[62vh] h-42 mt-[-6rem] lg:mt-[-8rem]' src='/images/hero_AI.png' />
+        <img className='w-[62vh] h-42 mt-[-6rem] lg:mt-[-8rem] rounded-b-[70px]' src='/images/hero_AI.png' />
       </div>
     </section>
   );

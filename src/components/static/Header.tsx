@@ -14,14 +14,14 @@ export default function Header() {
         className=" w-fit"
       />
       <nav className="flex gap-2">
-        <Link href={"/auth"} className="py-2 px-4 text-white">
+        {/* <Link href={"/auth"} className="py-2 px-4 text-white">
           Log In
-        </Link>{" "}
+        </Link>{" "} */}
         <Link
           href={"/auth"}
-          className="py-2 px-4 bg-[#1C1C1C] text-white rounded"
+          className="py-2 px-4 bg-[#1C1C1C] hover:bg-white hover:text-black hover:bg-opacity-60 text-white font-bold rounded shadow-lg"
         >
-          Get started
+          Login &rarr;
         </Link>
       </nav>
     </header>
