@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <div className="h-screen">
-      <section className="flex bg-[#100146] w-full text-white gap-12 px-12 lg:px-[4em] pt-[12em] mx-auto justify-center items-start">
+      <section className="flex bg-[#100146] w-full text-white gap-12 px-12 lg:px-[4em] pt-[12em] mx-auto justify-center items-start h-full">
         <div
           className="w-[42em]"
           data-aos="zoom-out-right"

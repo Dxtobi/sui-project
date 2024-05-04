@@ -10,11 +10,11 @@ export default function Header() {
 
   if (session.status === "authenticated") {
     return (
-      <header className='flex px-8 justify-between items-center py-4 fixed left-0 top-0 w-full'>
+      <header className='flex px-8 justify-between items-center py-4 fixed left-0 top-0 w-full text-white'>
         <Image
           width={100}
           height={50}
-          src={"/images/ailogob.png"}
+          src={"/images/ailogo.png"}
           alt=''
           className=' w-fit'
         />
@@ -37,7 +37,7 @@ export default function Header() {
         <Image
           width={100}
           height={50}
-          src={"/images/ailogob.png"}
+          src={"/images/ailogo.png"}
           alt=''
           className=' w-fit'
         />
