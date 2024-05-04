@@ -53,6 +53,27 @@ pre {
 }
 
 /* -------------------------------------------- */
+/*------------------ typewriter */
+/* -------------------------------------------- */
+
+/* Typewriter.css */
+.typewriter {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cursor {
+  animation: blink 0.78s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+/* -------------------------------------------- */
 /*------------------ scrollbar */
 /* -------------------------------------------- */
 ::-webkit-scrollbar {
@@ -73,4 +94,6 @@ pre {
 
 ::-webkit-scrollbar-track {
   background: #ffffff84;
-} /**/
+}
+
+/**/
