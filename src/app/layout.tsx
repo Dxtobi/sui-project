@@ -21,6 +21,7 @@ export default async function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
+
         <SessionProvider session={session}>
           <main className='w-full h-full'>
             <Header />

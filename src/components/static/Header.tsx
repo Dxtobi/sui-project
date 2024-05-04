@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
+
   const session = useSession();
 
   if (session.status === "authenticated") {
@@ -51,4 +52,5 @@ export default function Header() {
       </header>
     );
   }
+
 }
