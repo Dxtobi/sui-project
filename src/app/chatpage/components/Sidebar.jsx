@@ -67,8 +67,7 @@ const Sidebar = ({children}) => {
            id="sidebarWrapper" 
            >
 
-
-            <div>
+            <div style={{marginTop: "10%"}}>
 
                 {/* <div className="top_section">
 
