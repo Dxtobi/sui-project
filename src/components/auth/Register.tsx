@@ -43,7 +43,7 @@ export default function Register({ changeAuth }: { changeAuth: () => void }) {
     <div className=' md:w-[47%] flex relative left-10 flex-col items-center '>
       <div className='mb-10'>
         <h2 className='font-bold text-[36px] text-call_to_action text-center'>
-          Sign up with free trail
+          Sign up with free trial
         </h2>
         <p className=' text-center text-call_to_action'>
           Empower your experience, sign up for a free account today{" "}

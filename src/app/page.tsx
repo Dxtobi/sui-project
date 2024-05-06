@@ -13,15 +13,15 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="h-screen">
-      <section className="flex bg-[#100146] w-full text-white gap-12 px-12 lg:px-[4em] pt-[12em] mx-auto justify-center items-start">
+    <div className="flex flex-col h-screen bg-[#100146] overflow-hidden sm:overflow-auto">
+      <section className="flex w-full text-white gap-12 px-12 lg:px-[4em] pt-[10em] mx-auto justify-center items-start">
         <div
           className="w-[42em]"
           data-aos="zoom-out-right"
           data-aos-duration="1000"
           data-aos-anchor-placement="top-center"
         >
-          <h1 className="text-[48px] font-[600] leading-[60px]">
+          <h1 className="text-[28px] md:text-[48px] font-[600]">
             Writing Smart Contracts for the{" "}
             <span className="special-text">Sui Ecosystem</span> Just Got Better
           </h1>
@@ -48,25 +48,28 @@ export default function Home() {
           <h1 className="flex special-text-2 text-[32px] font-[600]">
             <Typewriter
               options={{
-                strings: ["Create a smart contract for a marketplace."],
+                strings: [
+                  `Create a smart contract for a marketplace.`,
+                  `Help me pick a gift for my dad who loves fishing`,
+                ],
                 autoStart: true,
                 loop: true,
               }}
             />
           </h1>
-          <div className="flex w-[82vh] h-42 mt-[-4rem] lg:mt-[-4rem] mr-[-8em] relative">
+          {/* <div className="flex w-full h-34 mt-[-4rem] lg:mt-[-4rem] mr-[-8em] relative">
             <Image
-              width={200}
-              height={50}
+              width={198}
+              height={40}
               alt="landing-page"
               className="w-fit rounded-b-[70px]"
               src={"/images/hero_AI.png"}
             />
-          </div>
+          </div> */}
         </div>
       </section>
 
-      <section className="flex bg-[#100146] text-white gap-9 px-12 justify-end items-center py-4 w-full">
+      <section className="flex text-white mt-[6em] gap-9 px-12 justify-end items-center py-4 w-full">
         <div>Terms & Condition</div>
         <div>Privacy Policy</div>
       </section>

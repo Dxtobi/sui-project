@@ -47,7 +47,7 @@ export default function Auth() {
             width={150}
             height={100}
           />
-          <h1 className="text-[48px] ">
+          <h1 className="text-[48px] font-bold">
             Learn, Discover & Automate in One Place.
           </h1>
           <p>
