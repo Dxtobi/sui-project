@@ -8,16 +8,12 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 
+
+
 export default function Auth() {
   const [current_auth_component_login, switchAuthComponent] = useState(true);
-
-
-
-export default function Auth() {
   const router = useRouter();
   const session = useSession();
-
-  const [current_auth_component_login, switchAuthComponent] = useState(false);
 
 
   function toggleAuthComponent() {
