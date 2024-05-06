@@ -9,6 +9,7 @@ export default function Home() {
   useEffect(() => {
     AOS.init({
       once: true,
+      duration: 3000,
     });
   }, []);
 
@@ -18,7 +19,6 @@ export default function Home() {
         <div
           className="w-[42em]"
           data-aos="zoom-out-right"
-          data-aos-duration="1000"
           data-aos-anchor-placement="top-center"
         >
           <h1 className="text-[28px] md:text-[48px] font-[600]">
@@ -32,20 +32,17 @@ export default function Home() {
           <button
             className="bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-[#F258FF] to-[#9715FF] mt-8 p-4 rounded-md"
             type="button"
-            data-aos="zoom-out-right"
-            data-aos-anchor-placement="center-bottom"
           >
             Explore Now with SuiAI &rarr;
           </button>
         </div>
 
-        <div
-          data-aos="fade-up"
-          data-aos-anchor-placement="top-bottom"
-          data-aos-duration="100"
-          className="flex flex-col w-[37em] lg:w-[42em] mr-auto justify-end items-end"
-        >
-          <h1 className="flex special-text-2 text-[32px] font-[600]">
+        <div className="flex flex-col w-[37em] lg:w-[42em] mr-auto justify-end items-end">
+          <h1
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            className="flex special-text-2 text-[32px] font-[600]"
+          >
             <Typewriter
               options={{
                 strings: [
