@@ -1,29 +1,13 @@
+"use client"
 import React, { useState } from 'react';
-import {
-    FaTh,
-    FaBars,
-    FaUserAlt,
-    FaRegChartBar,
-    FaCommentAlt,
-    FaShoppingBag,
-    FaRocketchat,
-    FaThList
-}from "react-icons/fa";
-
-
-import Image from 'next/image'
-// import BinPicture from './images/bin.jpg'
-
-import { NavLink } from 'react-router-dom';
 
 import  ChatIcon from "./icons/ChatIcon";
 import  BinIcon from "./icons/BinIcon";
-import  NewChat  from "./sidebarComponents/Chat";
 import  User  from "./sidebarComponents/User";
-import LayoutHeader from "./layoutComponenets/Header";
+import Link from 'next/link';
 
 
-const Sidebar = ({children}) => {
+const Sidebar = () => {
 
     
     const[isOpen ,setIsOpen] = useState(true);
@@ -31,19 +15,19 @@ const Sidebar = ({children}) => {
     const menuItem=[
 
         {
-            path:"/ethics",
+            path:"/chatpage/ethics",
             name:"AI Chat Tool Ethics",
             icon:<ChatIcon/>
         },
 
         {
             
-            path:"/writetool",
+            path:"/chatpage/writetool",
             name:"AI Chat Tool Impact Writing",
             icon:<ChatIcon/>
         },
         {
-            path:"/bot",
+            path:"/chatpage/bot",
             name:"New Chat",
             icon:<ChatIcon/>
         },
@@ -57,35 +41,27 @@ const Sidebar = ({children}) => {
 
 
 
-        <>
-{/*         
-        <div className="container"> */}
+        <div>
+
 
            <div 
-           style={{width: isOpen ? "356px" : "50px"}} 
-           className="sidebar sidebarWrapperTop" 
-           id="sidebarWrapper" 
+            style={{width: isOpen ? "356px" : "50px"}} 
+            className="sidebar sidebarWrapperTop" 
+            id="sidebarWrapper" 
            >
 
             <div style={{marginTop: "10%"}}>
 
-                {/* <div className="top_section">
-
-                    <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Logo</h1>
-                    <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
-                        <FaBars onClick={toggle}/>
-                    </div>
-                </div> */}
-
+               
                         
-                <NewChat />
+                {/* <NewChat /> */}
 
                 {
                 
                     menuItem.map((item, index)=>(
 
                     
-                        <NavLink to={item.path} key={index} className="link" activeclassName="active">
+                        <Link href={item.path} key={index} className="link" activeclassName="active">
 
                             <div className="icon">
 
@@ -99,20 +75,12 @@ const Sidebar = ({children}) => {
                             
                             </div>
 
-                        </NavLink>
+                        </Link>
 
                     ))
                 }
 
             </div>
-
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-
-
                 <div className="sidebarWrapperBottom">
 
                 <div className="divider"></div>
@@ -120,19 +88,9 @@ const Sidebar = ({children}) => {
                     <br/>
     
                     <div className="sidebarWrapperItemsContainer sidebarWrapperItemsContainer1">
-                    {/* <div className="sidebarWrapperItemsIcon"><BinIcon/></div> */}
+                
 
-                    {/* <Image
-                    src={BinPicture}
-                    alt="SuiAILogo Image"
-                    style={{
-                    width: '116px',
-                    height: '50px'
-                    
-                    }}
-                    /> */}
-
-                    
+            
                     <BinIcon/>
 
                     <div className="sidebarWrapperItemstext">Clear conversations</div>
@@ -147,23 +105,7 @@ const Sidebar = ({children}) => {
 
            </div>
 
-
-
-
-
-
-
-        {/* </div> */}
-
-        <div className="app-content-display app-content-display-color">
-
-            
-          <LayoutHeader />
-        <main>{children}</main>
-
         </div>
-        
-        </>
 
     );
 };
