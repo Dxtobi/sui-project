@@ -24,7 +24,7 @@ export default function Header() {
           </button>
           <Link
             href={"/auth"}
-            className='py-2 px-4 bg-[#1C1C1C] text-white rounded'
+            className='py-2 px-4 bg-[#ffffff] text-gray-800 rounded'
           >
             {session.data.user?.email} &rarr;
           </Link>
@@ -41,10 +41,10 @@ export default function Header() {
           alt=''
           className=' w-fit'
         />
-        <nav className='flex hidden gap-2'>
+        <nav className='flex  gap-2'>
           <Link
             href={"/auth"}
-            className='py-2 px-4 bg-[#1C1C1C] text-white rounded'
+            className='py-2 px-4 bg-[#ffffff] text-gray-800 rounded'
           >
             Get started &rarr;
           </Link>
