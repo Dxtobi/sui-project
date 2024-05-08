@@ -14,8 +14,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col h-screen bg-[#100146]  overflow-hidden sm:overflow-auto">
-      <section className="flex w-full text-white gap-12 px-12 lg:px-[4em] pt-[12em] md:py-[13%] mx-auto justify-center items-start">
+    <div className="flex flex-col h-screen bg-[#100146] overflow-hidden sm:overflow-auto">
+      <section className="flex w-full text-white gap-12 px-12 lg:px-[4em] pt-[12em] md:py-[15%] mx-auto justify-center items-start">
         <div
           className="w-[42em]"
           data-aos="zoom-out-right"
@@ -66,7 +66,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex text-white mt-[3em] gap-9 px-12 justify-end items-center py-4 w-full">
+      <section className="flex text-white mt-[2em] gap-9 px-12 justify-end items-center py-4 w-full">
         <div>Terms & Condition</div>
         <div>Privacy Policy</div>
       </section>

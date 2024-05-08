@@ -39,7 +39,7 @@ export default function Register({ changeAuth }: { changeAuth: () => void }) {
   }
 
   return (
-    <div className=" md:w-[47%] flex relative left-10 flex-col items-center ">
+    <div className="sm:w-[87%] md:w-[67%] flex relative px-5 md:px-0 flex-col items-center">
       <div className="mb-10">
         <h2 className="font-bold text-[36px] text-call_to_action text-center">
           Sign up with free trial
