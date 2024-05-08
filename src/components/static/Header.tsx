@@ -3,12 +3,20 @@
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
   const session = useSession();
 
+  const isAuthRoute = pathname === "/auth";
+
   return (
-    <header className="flex px-8 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-[#545454] to-[#fff] z-50 justify-between items-center py-4 fixed left-0 top-0 w-full">
+    <header
+      className={`${
+        isAuthRoute ? "hidden" : ""
+      } flex px-8 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-[#545454] to-[#fff] z-50 justify-between items-center py-4 fixed left-0 top-0 w-full`}
+    >
       <Image
         width={100}
         height={50}
